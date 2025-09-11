@@ -12,6 +12,8 @@
 
 :root {
   font-family: DM Sans, sans-serif;
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-000);
 }
 
 @theme {
@@ -22,6 +24,7 @@
   --color-neutral-300: hsl(240, 6%, 70%);
   --color-neutral-200: hsl(250, 6%, 84%);
   --color-neutral-000: hsl(0, 0%, 100%);
+  --color-neutral-000-opaque: hsla(0, 0%, 100%, 0.2);
 
   --color-orange-500:  hsl(28, 100%, 52%);
 
