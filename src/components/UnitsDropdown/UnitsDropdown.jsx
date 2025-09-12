@@ -1,48 +1,99 @@
 import React from 'react';
 import { DropdownMenu } from 'radix-ui';
-
+import Icon from '../Icon'
+import './UnitsDropdown.css';
 
 function UnitsDropdown() {
+
+  const [temp, setTemp] = React.useState('celsius')
+  const [windSpeed, setWindSpeed] = React.useState('celsius')
+  const [precipitation, setPrecipitation] = React.useState('celsius')
+
+  function nextTemp(event) {
+    setTemp(event.target.ariaLabel)
+  }
+  function nextWindSpeed(event) {
+    setWindSpeed(event.target.ariaLabel)
+  }
+  function nextPrecipitation(event) {
+    setPrecipitation(event.target.ariaLabel)
+  }
+
+
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
-        <button className='rounded-lg bg-neutral-000-opaque'>
+      <DropdownMenu.Trigger className='dropdown-trigger rounded-lg bg-neutral-800 cursor-pointer'>
           <div className='flex gap-2.5 justify-evenly py-3 px-4'>
             <img src="../../public/images/icon-units.svg" alt="" />
             <span>Units</span>
-            <img src="../../public/images/icon-dropdown.svg" alt="" />
+            <img className='dropdown-icon' src="../../public/images/icon-dropdown.svg" alt="" />
           </div>
-        </button>
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
-        <DropdownMenu.Content>
-          <DropdownMenu.Label />
-          <DropdownMenu.Item />
+        <DropdownMenu.Content className=' dropdown-content-container bg-neutral-800 rounded-xl px-2.5 py-1.5' sideOffset={10} side='bottom' align='end'>
+          <DropdownMenu.Item className="text-preset-7 py-2.5 px-2 rounded-lg hover:bg-neutral-700 focus:bg-neutral-700">
+            Switch to Imperial
+          </DropdownMenu.Item>
 
-          <DropdownMenu.Group>
-            <DropdownMenu.Item />
-          </DropdownMenu.Group>
-
-          <DropdownMenu.CheckboxItem>
-            <DropdownMenu.ItemIndicator />
-          </DropdownMenu.CheckboxItem>
-
-          <DropdownMenu.RadioGroup>
-            <DropdownMenu.RadioItem>
-              <DropdownMenu.ItemIndicator />
+          <DropdownMenu.RadioGroup className='py-2.5' value={temp}>
+          <DropdownMenu.Label className='text-preset-8 text-neutral-300 pb-2'>
+            Temperature
+          </DropdownMenu.Label>
+            <DropdownMenu.RadioItem onSelect={nextTemp} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='celsius' aria-label='celsius'>
+              Celsius (°C)
+              <DropdownMenu.ItemIndicator>
+                <Icon />
+              </DropdownMenu.ItemIndicator>
+            </DropdownMenu.RadioItem>
+            <DropdownMenu.RadioItem onSelect={nextTemp} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='fahrenheit' aria-label='fahrenheit'>
+              Fahrenheit (°F)
+              <DropdownMenu.ItemIndicator>
+                <Icon />
+              </DropdownMenu.ItemIndicator>
             </DropdownMenu.RadioItem>
           </DropdownMenu.RadioGroup>
 
-          <DropdownMenu.Sub>
-            <DropdownMenu.SubTrigger />
-            <DropdownMenu.Portal>
-              <DropdownMenu.SubContent />
-            </DropdownMenu.Portal>
-          </DropdownMenu.Sub>
+          <DropdownMenu.Separator className='h-px w-full bg-neutral-600' />
 
-          <DropdownMenu.Separator />
-          <DropdownMenu.Arrow />
+          <DropdownMenu.RadioGroup value={windSpeed} className='py-2.5'>
+          <DropdownMenu.Label className='text-preset-8 text-neutral-300 pb-2'>
+            Wind Speed
+          </DropdownMenu.Label>
+            <DropdownMenu.RadioItem onSelect={nextWindSpeed} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='kilometers' aria-label='kilometers'>
+              km/h
+              <DropdownMenu.ItemIndicator>
+                <Icon />
+              </DropdownMenu.ItemIndicator>
+            </DropdownMenu.RadioItem>
+            <DropdownMenu.RadioItem onSelect={nextWindSpeed} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='miles' aria-label='miles'>
+              mph
+              <DropdownMenu.ItemIndicator>
+                <Icon />
+              </DropdownMenu.ItemIndicator>
+            </DropdownMenu.RadioItem>
+          </DropdownMenu.RadioGroup>
+          
+          <DropdownMenu.Separator className='h-px w-full bg-neutral-600' />
+
+          <DropdownMenu.RadioGroup value={precipitation} className='pt-2.5'>
+          <DropdownMenu.Label className='text-preset-8 text-neutral-300 pb-2'>
+            Precipitation
+          </DropdownMenu.Label>
+            <DropdownMenu.RadioItem onSelect={nextPrecipitation} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='milimeters' aria-label='milimeters'>
+              Millimeters (mm)
+              <DropdownMenu.ItemIndicator>
+                <Icon />
+              </DropdownMenu.ItemIndicator>
+            </DropdownMenu.RadioItem>
+            <DropdownMenu.RadioItem onSelect={nextPrecipitation} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='inches' aria-label='inches'>
+              Inches (in)
+              <DropdownMenu.ItemIndicator>
+                <Icon />
+              </DropdownMenu.ItemIndicator>
+            </DropdownMenu.RadioItem>
+          </DropdownMenu.RadioGroup>
+
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>
