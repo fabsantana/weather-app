@@ -1,7 +1,9 @@
 import React from 'react';
+import { IconsContext } from '../IconsProvider/IconsContext.jsx';
 
-function Icon() {
-  return <img src='../../public/images/icon-checkmark.svg' />;
+function Icon({className='', name}) {
+  const {APP_ICONS} = React.useContext(IconsContext)
+  return <img className={className} src={Object.keys(APP_ICONS).includes(name) ? APP_ICONS[name].appIconURL : ''} />;
 }
 
 export default Icon;
