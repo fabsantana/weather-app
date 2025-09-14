@@ -23,7 +23,7 @@ function UnitsDropdown() {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger className='dropdown-trigger rounded-lg bg-neutral-800 cursor-pointer'>
           <div className='flex gap-2.5 justify-evenly py-3 px-4'>
-            <Icon name='gear'/>
+            <Icon variant='gear'/>
             <span>Units</span>
             <img className='dropdown-icon' src="/images/icon-dropdown.svg" alt="" />
           </div>
@@ -42,13 +42,13 @@ function UnitsDropdown() {
             <DropdownMenu.RadioItem onSelect={nextTemp} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='celsius' aria-label='celsius'>
               Celsius (°C)
               <DropdownMenu.ItemIndicator>
-                <Icon name='checkmark'/>
+                <Icon variant='checkmark'/>
               </DropdownMenu.ItemIndicator>
             </DropdownMenu.RadioItem>
             <DropdownMenu.RadioItem onSelect={nextTemp} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='fahrenheit' aria-label='fahrenheit'>
               Fahrenheit (°F)
               <DropdownMenu.ItemIndicator>
-                <Icon name='checkmark'/>
+                <Icon variant='checkmark'/>
               </DropdownMenu.ItemIndicator>
             </DropdownMenu.RadioItem>
           </DropdownMenu.RadioGroup>
@@ -62,13 +62,13 @@ function UnitsDropdown() {
             <DropdownMenu.RadioItem onSelect={nextWindSpeed} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='kilometers' aria-label='kilometers'>
               km/h
               <DropdownMenu.ItemIndicator>
-                <Icon name='checkmark'/>
+                <Icon variant='checkmark'/>
               </DropdownMenu.ItemIndicator>
             </DropdownMenu.RadioItem>
             <DropdownMenu.RadioItem onSelect={nextWindSpeed} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='miles' aria-label='miles'>
               mph
               <DropdownMenu.ItemIndicator>
-                <Icon name='checkmark'/>
+                <Icon variant='checkmark'/>
               </DropdownMenu.ItemIndicator>
             </DropdownMenu.RadioItem>
           </DropdownMenu.RadioGroup>
@@ -82,13 +82,13 @@ function UnitsDropdown() {
             <DropdownMenu.RadioItem onSelect={nextPrecipitation} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='milimeters' aria-label='milimeters'>
               Millimeters (mm)
               <DropdownMenu.ItemIndicator>
-                <Icon name='checkmark'/>
+                <Icon variant='checkmark'/>
               </DropdownMenu.ItemIndicator>
             </DropdownMenu.RadioItem>
             <DropdownMenu.RadioItem onSelect={nextPrecipitation} className='text-preset-7 py-2 px-2 flex items-center justify-between cursor-pointer rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' value='inches' aria-label='inches'>
               Inches (in)
               <DropdownMenu.ItemIndicator>
-                <Icon name='checkmark'/>
+                <Icon variant='checkmark'/>
               </DropdownMenu.ItemIndicator>
             </DropdownMenu.RadioItem>
           </DropdownMenu.RadioGroup>

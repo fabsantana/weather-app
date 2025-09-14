@@ -1,17 +1,18 @@
-import { React } from 'react'
-import './App.css'
-import Header from './components/Header/Header.jsx'
-import IconsProvider from './components/IconsProvider/IconsProvider.jsx'
+import { React } from 'react';
+import './App.css';
+import IconsProvider from './components/IconsProvider/IconsProvider.jsx';
+import WeatherDataProvider from './components/WeatherDataProvider/WeatherDataProvider.jsx';
+import Main from './components/Main/Main.jsx'
 
 function App() {
 
   return (
-    <IconsProvider>
-    <main> 
-      <Header/>
-    </main> 
-    </IconsProvider>
-  )
+    <WeatherDataProvider>
+      <IconsProvider>
+        <Main />
+      </IconsProvider>
+    </WeatherDataProvider>
+  );
 }
 
-export default App
+export default App;

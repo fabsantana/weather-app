@@ -83,6 +83,47 @@
     line-height: 120%;
     font-weight: 500;
   }
+
+  .btn-primary {
+    background-color: var(--color-blue-500);
+    border-radius: 0.75rem;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    cursor: pointer;
+
+    &:focus {
+        outline-offset: 3px;
+        outline-color: var(--color-blue-500);
+        outline-style: var(--tw-outline-style);
+        outline-width: 2px;
+    }
+
+    &:hover {
+        @media (hover: hover) {
+            background-color: var(--color-blue-700);
+        }
+    }
+  }
+  .btn-secondary {
+    background-color: var(--color-neutral-800);
+    border-radius: 0.75rem;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    cursor: pointer;
+
+    &:focus {
+        outline-offset: 3px;
+        outline-color: var(--color-neutral-600);
+        outline-style: var(--tw-outline-style);
+        outline-width: 2px;
+    }
+
+    &:hover {
+        @media (hover: hover) {
+            background-color: var(--color-neutral-600);
+        }
+    }
+  }
 }
 
 /* 1. Use a more-intuitive box-sizing model */
