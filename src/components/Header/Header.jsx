@@ -1,6 +1,4 @@
 import React from 'react';
-import Logo from '../Logo/Logo.jsx';
-import UnitsDropdown from '../UnitsDropdown/UnitsDropdown.jsx';
 import SearchBar from '../SearchBar/SearchBar.jsx';
 import Button from '../Button/Button.jsx';
 import Icon from '../Icon/Icon.jsx';

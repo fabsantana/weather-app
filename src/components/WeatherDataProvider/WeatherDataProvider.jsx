@@ -6,7 +6,8 @@ function WeatherDataProvider({children}) {
 
   // const [location, setLocation] = React.useState();
   const [date, setDate] = React.useState();
-  // const [currentTemp, setCurrentTemp] = React.useState();
+  const [currentTemp, setCurrentTemp] = React.useState();
+  const [weatherCode, setWeatherCode] = React.useState();
 
   const weatherData = useAPIFetch(
     'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=weather_code,temperature_2m_max,temperature_2m_min&hourly=temperature_2m,weather_code&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m&timezone=America%2FNew_York'
@@ -16,10 +17,15 @@ function WeatherDataProvider({children}) {
     if (weatherData) {
       const newDate = new Date(weatherData.current.time)
       setDate(newDate)
+
+      setCurrentTemp(Math.round(weatherData.current.temperature_2m))
+
+      setWeatherCode(weatherData.current.weather_code)
+
     }
   }, [weatherData])
 
-  return <WeatherDataContext.Provider value={{weatherData, date}}>{children}</WeatherDataContext.Provider>;
+  return <WeatherDataContext.Provider value={{weatherData, date, currentTemp, weatherCode}}>{children}</WeatherDataContext.Provider>;
 }
 
 export default WeatherDataProvider;

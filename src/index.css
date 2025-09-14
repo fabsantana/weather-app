@@ -124,6 +124,20 @@
         }
     }
   }
+
+  .hero-bg-image-mobile {
+    background-image: url(/public/images/bg-today-small.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .hero-bg-image-desktop {
+    background-image: url(/public/images/bg-today-large.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 }
 
 /* 1. Use a more-intuitive box-sizing model */

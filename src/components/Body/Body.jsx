@@ -1,12 +1,16 @@
 import React from 'react';
-import ErrorPage from '../ErrorPage/ErrorPage.jsx'
+import CurrentForecastSection from '../CurrentForecastSection/CurrentForecastSection.jsx'
+import DailyForecastSection from '../DailyForecastSection/DailyForecastSection.jsx'
+import HourlyForecastSection from '../HourlyForecastSection/HourlyForecastSection.jsx'
 
 function Body() {
   
   return ( 
-    <span>
-      hello
-    </span>
+    <section>
+      <CurrentForecastSection />
+      <DailyForecastSection />
+      <HourlyForecastSection/>
+    </section>
   )
 
 }

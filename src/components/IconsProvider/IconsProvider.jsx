@@ -44,41 +44,49 @@ function IconsProvider({ children }) {
       weatherName: 'clear',
       weatherIconURL: 'public/images/icon-sunny.webp',
       weatherIconID: crypto.randomUUID(),
+      weatherCode: 0,
     },
-    'partly-cloudy': {
+    partlyCloudy: {
       weatherName: 'partly cloudy',
       weatherIconURL: 'public/images/icon-partly-cloudy.webp',
       weatherIconID: crypto.randomUUID(),
+      weatherCode: 2,
     },
     overcast: {
       weatherName: 'overcast',
       weatherIconURL: 'public/images/icon-overcast.webp',
       weatherIconID: crypto.randomUUID(),
+      weatherCode: 3,
     },
     fog: {
       weatherName: 'fog',
       weatherIconURL: 'public/images/icon-fog.webp',
       weatherIconID: crypto.randomUUID(),
+      weatherCode: 45,
     },
     drizzle: {
       weatherName: 'drizzle',
       weatherIconURL: 'public/images/icon-drizzle.webp',
       weatherIconID: crypto.randomUUID(),
+      weatherCode: 51,
     },
     rain: {
       weatherName: 'rain',
       weatherIconURL: 'public/images/icon-rain.webp',
       weatherIconID: crypto.randomUUID(),
+      weatherCode: 61,
     },
     snow: {
       weatherName: 'snow',
       weatherIconURL: 'public/images/icon-snow.webp',
       weatherIconID: crypto.randomUUID(),
+      weatherCode: 71,
     },
     thunderstorms: {
       weatherName: 'thunderstorms',
       weatherIconURL: 'public/images/icon-thunderstorms.webp',
       weatherIconID: crypto.randomUUID(),
+      weatherCode: 95,
     },
   };
   return (
