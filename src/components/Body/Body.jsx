@@ -6,7 +6,7 @@ import HourlyForecastSection from '../HourlyForecastSection/HourlyForecastSectio
 function Body() {
   
   return ( 
-    <section>
+    <section className='pt-8'>
       <CurrentForecastSection />
       <DailyForecastSection />
       <HourlyForecastSection/>
