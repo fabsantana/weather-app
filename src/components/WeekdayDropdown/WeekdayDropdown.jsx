@@ -13,10 +13,10 @@ function WeekdayDropdown({days, selectedDay, setSelectedDay}) {
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
-        <DropdownMenu.Content>
+        <DropdownMenu.Content className='bg-neutral-700 rounded-xl p-2'>
           <DropdownMenu.RadioGroup value={selectedDay} onValueChange={setSelectedDay}>
             {days.map(day => (
-              <DropdownMenu.RadioItem key={day} value={day}>
+              <DropdownMenu.RadioItem className='text-preset-7 cursor-pointer py-2.5 px-2 rounded-lg hover:bg-neutral-700 focus:bg-neutral-700' sideOffset={10} side='bottom' align='end' key={day} value={day}>
                 {new Date(day).toLocaleDateString('en-US', {weekday: 'long'})}
               </DropdownMenu.RadioItem>
             ))}
