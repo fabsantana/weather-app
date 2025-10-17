@@ -28,7 +28,7 @@ function CurrentForecastSection() {
   return (
     <>
       <Card variant='current-hero' />
-      <div className='grid grid-cols-2 grid-rows-2 gap-4 pt-5'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-4 pt-5'>
         {dataCards.map((data, idx) => (
           <Card 
             key={idx}

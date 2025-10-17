@@ -21,7 +21,7 @@ function UnitsDropdown() {
 ``
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger className='dropdown-trigger rounded-lg bg-neutral-800 cursor-pointer'>
+      <DropdownMenu.Trigger className='dropdown-trigger rounded-lg bg-neutral-600 cursor-pointer'>
           <div className='flex gap-2.5 justify-evenly py-3 px-4'>
             <Icon variant='gear'/>
             <span>Units</span>

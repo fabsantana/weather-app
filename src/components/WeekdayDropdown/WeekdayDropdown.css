@@ -1,0 +1,7 @@
+.dropdown-trigger[data-state="open"] .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-content-container {
+    min-width: 13.375rem;
+}
